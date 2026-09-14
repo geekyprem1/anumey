@@ -109,7 +109,7 @@ document.querySelectorAll('.reveal-words').forEach(el => {
 });
 
 /* One staggered entrance per content group keeps motion structured. */
-document.querySelectorAll('.work-grid, .service-grid, .ind-grid, .testi-grid, .process-steps').forEach(group => {
+document.querySelectorAll('.work-grid, .service-grid, .ind-grid, .testi-grid, .process-steps, .career-principles, .roles-list').forEach(group => {
   [...group.children].forEach((child, index) => {
     child.style.transitionDelay = `${Math.min(index, 4) * 70}ms`;
   });
