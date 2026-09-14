@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vorendis — Technology. Solutions. Impact.</title>
+  <meta name="description" content="Vorendis is a premier technology consultancy. We architect and implement lean, intelligent, noise-free technology solutions that deliver measurable impact for clients worldwide." />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Syne:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="index.html" class="brand">
+      <img src="assets/logo.png" alt="Vorendis logo" />
+      <span class="brand-name">Vorendis<span class="dot">.</span></span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+
+        <li class="nav-item" data-dropdown>
+          <button class="nav-trigger" aria-haspopup="true" aria-expanded="false">Services <span class="chev"></span></button>
+          <div class="dropdown wide">
+            <div class="dropdown-grid">
+              <a href="services.html" class="dropdown-link">
+                <span class="dl-title">
+                  <svg class="dl-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M6 6v13a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6M9 10h6"/><path d="M8 6a4 4 0 0 1 8 0"/></svg>
+                  Ecommerce Development <span class="dl-arrow">→</span>
+                </span>
+                <span class="dl-desc">Scalable, conversion-focused online stores.</span>
+              </a>
+              <a href="zoho.html" class="dropdown-link">
+                <span class="dl-title">
+                  <svg class="dl-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg>
+                  Zoho Consultation <span class="dl-arrow">→</span>
+                </span>
+                <span class="dl-desc">Advisory and roadmap for the Zoho suite.</span>
+              </a>
+              <a href="zoho.html" class="dropdown-link">
+                <span class="dl-title">
+                  <svg class="dl-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7l8-4 8 4-8 4-8-4Z"/><path d="M4 12l8 4 8-4M4 17l8 4 8-4"/></svg>
+                  Zoho Implementation <span class="dl-arrow">→</span>
+                </span>
+                <span class="dl-desc">Deploy, migrate, integrate and adopt.</span>
+              </a>
+              <a href="services.html" class="dropdown-link">
+                <span class="dl-title">
+                  <svg class="dl-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+                  IT Services <span class="dl-arrow">→</span>
+                </span>
+                <span class="dl-desc">Advanced strategy and custom solutions.</span>
+              </a>
+            </div>
+            <div class="dropdown-foot">
+              <div class="df-text">Not sure what you need?<small>We'll help you choose the right path.</small></div>
+              <a href="contact.html" class="btn btn-light">Get in Touch</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item" data-dropdown>
+          <button class="nav-trigger" aria-haspopup="true" aria-expanded="false">Company <span class="chev"></span></button>
+          <div class="dropdown single">
+            <div class="dropdown-grid">
+              <a href="about.html" class="dropdown-link">
+                <span class="dl-title">About Us <span class="dl-arrow">→</span></span>
+                <span class="dl-desc">Our story, vision and mission.</span>
+              </a>
+              <a href="about.html" class="dropdown-link">
+                <span class="dl-title">Our Values <span class="dl-arrow">→</span></span>
+                <span class="dl-desc">The principles behind every engagement.</span>
+              </a>
+              <a href="privacy.html" class="dropdown-link">
+                <span class="dl-title">Privacy Policy <span class="dl-arrow">→</span></span>
+                <span class="dl-desc">How we protect your data.</span>
+              </a>
+              <a href="terms.html" class="dropdown-link">
+                <span class="dl-title">Terms &amp; Conditions <span class="dl-arrow">→</span></span>
+                <span class="dl-desc">Terms governing our website and services.</span>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="zoho.html">Zoho</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Get in Touch <span class="arrow">→</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+    <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="hero-kicker line-reveal"><span class="status-dot"></span> Principal-led technology consultancy</div>
+        <h1 class="reveal-words" data-accent-start="3">Make every system earn its place.</h1>
+        <p class="hero-lead line-reveal">We turn disconnected technology into a clear operating advantage — architecting lean commerce, Zoho, and digital systems that move the business forward.</p>
+        <div class="hero-actions line-reveal">
+          <a href="contact.html" class="btn btn-primary">Discuss your project <span class="arrow">↗</span></a>
+          <a href="services.html" class="btn btn-ghost">See our capabilities</a>
+        </div>
+        <div class="hero-proof line-reveal">
+          <div><strong>Principal-led</strong><span>Senior oversight throughout</span></div>
+          <div><strong>Built to scale</strong><span>Global standards, agile delivery</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual line-reveal">
+        <div class="system-board">
+          <div class="board-head">
+            <span><i></i> VORENDIS / SYSTEM MAP</span>
+            <span class="board-status">LIVE</span>
+          </div>
+          <div class="signal-map">
+            <svg class="signal-lines" viewBox="0 0 600 470" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M126 92 C210 92 202 220 294 220" />
+              <path d="M126 236 C210 236 202 220 294 220" />
+              <path d="M126 380 C210 380 202 220 294 220" />
+              <path class="signal-hot" d="M330 220 C420 220 412 236 492 236" />
+            </svg>
+            <div class="system-node node-commerce"><small>01 / REVENUE</small><strong>Commerce</strong><span>Conversion architecture</span></div>
+            <div class="system-node node-zoho"><small>02 / CONTROL</small><strong>Zoho</strong><span>Connected operations</span></div>
+            <div class="system-node node-digital"><small>03 / SCALE</small><strong>Digital</strong><span>Custom systems</span></div>
+            <div class="system-core">
+              <span class="core-ring"></span>
+              <img src="assets/logo.png" alt="" />
+            </div>
+            <div class="system-outcome"><small>BUSINESS OUTPUT</small><strong>Impact</strong><span><i></i> Aligned &amp; measurable</span></div>
+          </div>
+          <div class="board-foot">
+            <span>Lean architecture</span>
+            <span>Senior oversight</span>
+            <span>Signal &gt; noise</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item">Lean, intelligent technology</span>
+      <span class="marquee-item">Measurable impact</span>
+      <span class="marquee-item">Principal-led oversight</span>
+      <span class="marquee-item">Global best practices</span>
+      <span class="marquee-item">Noise-free solutions</span>
+    </div>
+  </div>
+
+  <!-- STATEMENT / WHO WE ARE -->
+  <section class="statement dark">
+    <div class="container">
+      <span class="eyebrow line-reveal">Who we are</span>
+      <p class="reveal-words" style="margin-top:26px">At Vorendis, we bridge the gap between complex technical challenges and scalable business solutions.</p>
+      <p class="section-lead line-reveal" style="max-width:60ch;margin-top:34px">As a premier technology consultancy, we partner with forward-thinking organizations to architect and implement transformative strategies — delivering measurable impact for clients across the globe.</p>
+      <div class="line-reveal" style="margin-top:36px">
+        <a href="about.html" class="link-arrow">About us <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section class="section work">
+    <div class="container">
+      <span class="eyebrow line-reveal">Selected work</span>
+      <h2 class="section-title reveal-words">Companies that closed the gap — and what changed.</h2>
+      <div class="work-grid">
+        <article class="work-card line-reveal">
+          <span class="work-tag">Ecommerce · Rebuild</span>
+          <h3>Meridian Retail</h3>
+          <p class="work-desc">Rebuilt a bloated storefront into a lean, conversion-focused commerce experience.</p>
+          <div class="work-metrics">
+            <div class="work-metric"><div class="m-num" data-count="2" data-suffix="x">0</div><div class="m-lbl">Conversion lift</div></div>
+            <div class="work-metric"><div class="m-num" data-count="40" data-suffix="%">0</div><div class="m-lbl">Faster load</div></div>
+          </div>
+        </article>
+
+        <article class="work-card line-reveal">
+          <span class="work-tag">Zoho · Implementation</span>
+          <h3>Altura Group</h3>
+          <p class="work-desc">Unified sales, finance and support on a single Zoho platform in weeks, not months.</p>
+          <div class="work-metrics">
+            <div class="work-metric"><div class="m-num" data-count="4">0</div><div class="m-lbl">Systems unified</div></div>
+            <div class="work-metric"><div class="m-num" data-count="60" data-suffix="%">0</div><div class="m-lbl">Less manual work</div></div>
+          </div>
+        </article>
+
+        <article class="work-card line-reveal">
+          <span class="work-tag">IT Strategy · Advisory</span>
+          <h3>Verdant Commerce</h3>
+          <p class="work-desc">Principal-led technology roadmap that aligned systems with a global expansion plan.</p>
+          <div class="work-metrics">
+            <div class="work-metric"><div class="m-num" data-count="3">0</div><div class="m-lbl">New markets</div></div>
+            <div class="work-metric"><div class="m-num" data-count="30" data-suffix="%">0</div><div class="m-lbl">Margin gain</div></div>
+          </div>
+        </article>
+
+        <article class="work-card line-reveal">
+          <span class="work-tag">Finance · Automation</span>
+          <h3>Northline Foods</h3>
+          <p class="work-desc">GST-compliant, subscription-ready finance operations on the Zoho Finance Suite.</p>
+          <div class="work-metrics">
+            <div class="work-metric"><div class="m-num" data-count="99" data-suffix="%">0</div><div class="m-lbl">Data accuracy</div></div>
+            <div class="work-metric"><div class="m-num" data-count="7" data-suffix=" days">0</div><div class="m-lbl">Faster close</div></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="what-we-do">
+    <div class="container">
+      <span class="eyebrow line-reveal">Our services</span>
+      <h2 class="section-title reveal-words">Everything your technology needs — under one roof.</h2>
+
+      <div class="service-grid">
+        <article class="service-card line-reveal">
+          <div class="service-num">01</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M6 6v13a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6M9 10h6"/><path d="M8 6a4 4 0 0 1 8 0"/></svg>
+          </div>
+          <h3>Ecommerce Development</h3>
+          <p>Scalable, high-performing online stores engineered to convert — from storefront to checkout to fulfilment.</p>
+          <a href="services.html" class="more">Learn more →</a>
+        </article>
+
+        <article class="service-card line-reveal">
+          <div class="service-num">02</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg>
+          </div>
+          <h3>Zoho Consultation &amp; Implementation</h3>
+          <p>End-to-end Zoho advisory and deployment — CRM, Finance and the wider suite, configured to how you actually work.</p>
+          <a href="zoho.html" class="more">Learn more →</a>
+        </article>
+
+        <article class="service-card line-reveal">
+          <div class="service-num">03</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>IT Services</h3>
+          <p>Advanced technology strategy and tailored digital solutions that equip you with the tools to create lasting market impact.</p>
+          <a href="services.html" class="more">Learn more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section">
+    <div class="container split">
+      <div class="line-reveal">
+        <span class="eyebrow">Why us</span>
+        <h2 class="section-title reveal-words">Pragmatic, noise-free technology built for what the business actually needs.</h2>
+        <div class="feature-list">
+          <div class="feature-item">
+            <span class="fnum">01</span>
+            <div><h4>Principal-led strategic oversight</h4><p>Every project benefits from direct, high-level architectural and strategic oversight, so the original vision is never diluted during execution.</p></div>
+          </div>
+          <div class="feature-item">
+            <span class="fnum">02</span>
+            <div><h4>Global acumen, agile execution</h4><p>We bring global best practices to local implementations, and agile, cost-effective scaling strategies to international clients.</p></div>
+          </div>
+          <div class="feature-item">
+            <span class="fnum">03</span>
+            <div><h4>Pragmatic, noise-free solutions</h4><p>We cut through industry noise to deliver lean, efficient, highly functional technology — building what generates impact, avoiding unnecessary bloat.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-visual line-reveal" data-parallax="0.04">
+        <span class="eyebrow">Our promise</span>
+        <h3>“We build what the business actually needs to generate an impact.”</h3>
+        <p>We operate as true partners rather than mere vendors — investing deeply in the long-term technological resilience of the organizations we work with.</p>
+        <div class="quote-by">
+          <div class="avatar">V</div>
+          <div><strong>The Vorendis Model</strong><small>Principal-led consultancy</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section industries">
+    <div class="container">
+      <span class="eyebrow line-reveal">FAQ</span>
+      <h2 class="section-title reveal-words">Frequently asked questions.</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-idx">01</span><span class="faq-label">What does Vorendis do?</span><span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Vorendis is a premier technology consultancy. We partner with organizations to architect and implement transformative technology strategies — ecommerce development, Zoho consultation and implementation, and broader IT services — bridging complex technical challenges and scalable business solutions.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-idx">02</span><span class="faq-label">Who is Vorendis best suited for?</span><span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Forward-thinking organizations — both domestic and international — that want lean, intelligent technology focused on measurable impact rather than unnecessary complexity. We work as strategic partners, not just extra hands to execute tasks.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-idx">03</span><span class="faq-label">What makes Vorendis different?</span><span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Our principal-led consultancy model guarantees direct, high-level strategic oversight on every project. We cut through the industry noise to deliver lean, efficient, highly functional technology — building what the business actually needs to generate impact, avoiding bloat.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-idx">04</span><span class="faq-label">Do you work with international clients?</span><span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. We merge global best practices with agile execution, engineering solutions designed to scale seamlessly across borders while meeting rigorous world-class standards on every project.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="faq-idx">05</span><span class="faq-label">How do engagements and pricing work?</span><span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Every engagement is governed by an individual service agreement that details scope, deliverables, timelines and terms. Pricing is determined on a per-client, per-project basis and shared through proposals and quotations. Reach out and we'll scope it with you.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow line-reveal">Testimonials</span>
+      <h2 class="section-title reveal-words">What partnering with Vorendis feels like.</h2>
+      <div class="testi-grid">
+        <div class="testi line-reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>“Vorendis stripped away the noise and built exactly what our operations needed. No bloat, just impact — our margins improved within a quarter.”</blockquote>
+          <div class="who"><div class="avatar">RS</div><div><strong>Rohan Shah</strong><small>Director, Meridian Retail</small></div></div>
+        </div>
+        <div class="testi line-reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>“The principal-led approach made all the difference. We had senior strategic input on every decision, not just a hand-off to junior staff.”</blockquote>
+          <div class="who"><div class="avatar">AM</div><div><strong>Aisha Mansoor</strong><small>COO, Altura Group</small></div></div>
+        </div>
+        <div class="testi line-reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>“Their Zoho implementation unified our sales, finance and support in weeks. Global best practices, delivered with genuine agility.”</blockquote>
+          <div class="who"><div class="avatar">DK</div><div><strong>Daniel Kim</strong><small>Founder, Verdant Commerce</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL MARQUEE (light) -->
+  <div class="marquee light">
+    <div class="marquee-track reverse">
+      <span class="marquee-item">Proactive &amp; responsive</span>
+      <span class="marquee-item">Delivered on time</span>
+      <span class="marquee-item">Detail-oriented</span>
+      <span class="marquee-item">Creative breakthroughs</span>
+      <span class="marquee-item">Top-tier partner</span>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="section cta">
+    <div class="container">
+      <h2 class="reveal-words">The right partner at the right moment changes everything.</h2>
+      <p class="line-reveal">Tell us about your next stage and we'll design a lean, intelligent solution focused on measurable impact.</p>
+      <div class="hero-actions line-reveal">
+        <a href="contact.html" class="btn btn-light">Start a Conversation <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand">
+            <img src="assets/logo.png" alt="Vorendis logo" />
+            <span class="brand-name">Vorendis<span class="dot">.</span></span>
+          </a>
+          <p class="about">A premier technology consultancy delivering lean, intelligent, noise-free solutions that create measurable impact — locally and internationally.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="services.html">Ecommerce Development</a>
+          <a href="zoho.html">Zoho Consultation</a>
+          <a href="zoho.html">Zoho Implementation</a>
+          <a href="services.html">IT Services</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="about.html">About Us</a>
+          <a href="index.html#values">Our Values</a>
+          <a href="contact.html">Contact</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-col">
+          <h5>Get in touch</h5>
+          <a href="mailto:info@vorendis.net">info@vorendis.net</a>
+          <a href="contact.html">Request a consultation</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Vorendis. All rights reserved.</span>
+        <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
