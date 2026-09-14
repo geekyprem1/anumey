@@ -2,6 +2,13 @@
 
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+/* ---------- Page-level progress + launch sequence ---------- */
+const progress = document.createElement('div');
+progress.className = 'scroll-progress';
+progress.setAttribute('aria-hidden', 'true');
+document.body.appendChild(progress);
+requestAnimationFrame(() => document.body.classList.add('motion-ready'));
+
 /* ---------- Sticky + hide-on-scroll nav ---------- */
 const nav = document.getElementById('nav');
 let lastY = 0;
@@ -9,6 +16,9 @@ const onScroll = () => {
   const y = window.scrollY;
   if (y > 30) nav.classList.add('scrolled');
   else nav.classList.remove('scrolled');
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const ratio = scrollable > 0 ? Math.min(y / scrollable, 1) : 0;
+  progress.style.transform = `scaleX(${ratio})`;
   // hide when scrolling down past hero, show when scrolling up
   if (y > 300 && y > lastY && !nav.classList.contains('open')) nav.classList.add('hidden');
   else nav.classList.remove('hidden');
@@ -16,6 +26,13 @@ const onScroll = () => {
 };
 window.addEventListener('scroll', onScroll, { passive: true });
 onScroll();
+
+/* ---------- Current-page navigation state ---------- */
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav a[href]').forEach(link => {
+  const target = link.getAttribute('href').split('#')[0];
+  if (target === currentPage) link.setAttribute('aria-current', 'page');
+});
 
 /* ---------- Mobile nav toggle ---------- */
 const toggle = document.getElementById('navToggle');
@@ -91,6 +108,13 @@ document.querySelectorAll('.reveal-words').forEach(el => {
   });
 });
 
+/* One staggered entrance per content group keeps motion structured. */
+document.querySelectorAll('.work-grid, .service-grid, .ind-grid, .testi-grid, .process-steps').forEach(group => {
+  [...group.children].forEach((child, index) => {
+    child.style.transitionDelay = `${Math.min(index, 4) * 70}ms`;
+  });
+});
+
 /* ---------- Reveal on scroll (reveal, line-reveal, reveal-words) ---------- */
 const revealTargets = document.querySelectorAll('.reveal, .line-reveal, .reveal-words');
 if (prefersReduced) {
@@ -160,6 +184,24 @@ document.querySelectorAll('.faq-item').forEach(item => {
     }
   });
 });
+
+/* ---------- Pointer-responsive depth for the hero system ---------- */
+const systemBoard = document.querySelector('.system-board');
+if (systemBoard && !prefersReduced && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  systemBoard.addEventListener('pointermove', (event) => {
+    const rect = systemBoard.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width;
+    const y = (event.clientY - rect.top) / rect.height;
+    systemBoard.style.setProperty('--board-rx', `${((0.5 - y) * 3).toFixed(2)}deg`);
+    systemBoard.style.setProperty('--board-ry', `${(-4 + (x - 0.5) * 4).toFixed(2)}deg`);
+    systemBoard.style.setProperty('--board-y', '-3px');
+  });
+  systemBoard.addEventListener('pointerleave', () => {
+    systemBoard.style.removeProperty('--board-rx');
+    systemBoard.style.removeProperty('--board-ry');
+    systemBoard.style.removeProperty('--board-y');
+  });
+}
 
 /* ---------- Subtle parallax on tagged elements ---------- */
 if (!prefersReduced) {
