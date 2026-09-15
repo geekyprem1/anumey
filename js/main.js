@@ -219,6 +219,45 @@ if (!prefersReduced) {
   }
 }
 
+/* ---------- Auto-advancing testimonial rail ---------- */
+const testimonialRail = document.querySelector('.testi-grid');
+if (testimonialRail && !prefersReduced) {
+  const testimonialCards = [...testimonialRail.querySelectorAll('.testi')];
+  let testimonialTimer = null;
+  let railVisible = false;
+
+  const stopTestimonials = () => {
+    window.clearInterval(testimonialTimer);
+    testimonialTimer = null;
+  };
+
+  const advanceTestimonials = () => {
+    const gap = parseFloat(getComputedStyle(testimonialRail).gap) || 16;
+    const step = testimonialCards[0].getBoundingClientRect().width + gap;
+    const atEnd = testimonialRail.scrollLeft + testimonialRail.clientWidth >= testimonialRail.scrollWidth - step * 0.45;
+    testimonialRail.scrollTo({ left: atEnd ? 0 : testimonialRail.scrollLeft + step, behavior: 'smooth' });
+  };
+
+  const startTestimonials = () => {
+    if (!railVisible || testimonialTimer || document.hidden) return;
+    testimonialTimer = window.setInterval(advanceTestimonials, 3600);
+  };
+
+  testimonialRail.addEventListener('pointerenter', stopTestimonials);
+  testimonialRail.addEventListener('pointerleave', startTestimonials);
+  testimonialRail.addEventListener('focusin', stopTestimonials);
+  testimonialRail.addEventListener('focusout', startTestimonials);
+  testimonialRail.addEventListener('touchstart', stopTestimonials, { passive: true });
+  testimonialRail.addEventListener('touchend', startTestimonials, { passive: true });
+  document.addEventListener('visibilitychange', () => document.hidden ? stopTestimonials() : startTestimonials());
+
+  const railObserver = new IntersectionObserver(([entry]) => {
+    railVisible = entry.isIntersecting;
+    railVisible ? startTestimonials() : stopTestimonials();
+  }, { threshold: 0.25 });
+  railObserver.observe(testimonialRail);
+}
+
 /* ---------- Contact form (demo) ---------- */
 const form = document.getElementById('contactForm');
 if (form) {
