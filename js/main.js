@@ -258,14 +258,35 @@ if (testimonialRail && !prefersReduced) {
   railObserver.observe(testimonialRail);
 }
 
-/* ---------- Contact form (demo) ---------- */
+/* ---------- Contact form (Formspree) ---------- */
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const note = document.getElementById('formNote');
-    note.textContent = 'Thanks for filling out the form! We will contact you as soon as possible.';
-    note.style.color = 'var(--emerald)';
-    form.reset();
+    const button = form.querySelector('[type="submit"]');
+
+    button.disabled = true;
+    button.setAttribute('aria-busy', 'true');
+    note.textContent = 'Sending your message…';
+    note.style.color = 'var(--slate)';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      if (!response.ok) throw new Error('Submission failed');
+      note.textContent = 'Thanks! Your message has been sent. We will contact you shortly.';
+      note.style.color = 'var(--emerald)';
+      form.reset();
+    } catch (error) {
+      note.textContent = 'We could not send your message. Please email info@vorendis.net.';
+      note.style.color = 'var(--ember)';
+    } finally {
+      button.disabled = false;
+      button.removeAttribute('aria-busy');
+    }
   });
 }
