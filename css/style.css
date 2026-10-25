@@ -139,3 +139,10 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,inp
 @media(max-width:900px){.career-hero-grid{grid-template-columns:1fr}.career-manifesto{width:100%;max-width:650px;min-height:340px;margin-top:12px}.career-principles{margin-top:8px}.opportunities-head{display:block}.role-card{grid-template-columns:90px 1fr 34px}.role-tags{grid-column:2/3}.role-arrow{grid-column:3;grid-row:1/3}}
 @media(max-width:640px){.career-hero{padding-bottom:78px}.career-hero h1{max-width:100%;font-size:43px}.career-status{align-items:flex-start;line-height:1.5}.career-manifesto{min-height:300px;padding:28px}.career-manifesto blockquote{font-size:25px}.career-principles{grid-template-columns:1fr}.principle-card{min-height:200px}.role-card{grid-template-columns:1fr 36px;gap:13px;padding:24px 4px 24px 0}.role-card:hover{padding-left:10px}.role-index{grid-column:1/2}.role-card>div:nth-child(2){grid-column:1/-1}.role-tags{grid-column:1/-1}.role-arrow{grid-column:2;grid-row:1}.career-cta .cta-kicker{font-size:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal,.line-reveal,.reveal-words .word>span{opacity:1!important;transform:none!important}}
+
+/* Official Zoho brand mark in the homepage service card. */
+.service-card .service-icon-zoho{width:100px;background:transparent;border-radius:0}.service-icon-zoho img{display:block;width:100%;height:auto}.service-card:hover .service-icon-zoho{transform:none}
+
+/* Compact partner badge beside the hero buttons. */
+.hero-copy .hero-actions{align-items:center}.hero-partner{flex:0 0 112px;width:112px;max-width:100%}.hero-partner img{display:block;width:100%;height:auto;border-radius:5px}
+@media(max-width:640px){.hero-copy .hero-actions{flex-direction:row;flex-wrap:wrap}.hero-copy .hero-actions .btn-primary{width:100%}.hero-copy .hero-actions .btn-ghost{width:auto;flex:1 1 auto}.hero-partner{flex-basis:96px;width:96px}}
